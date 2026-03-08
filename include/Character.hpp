@@ -2,6 +2,7 @@
 #define CHARACTER_HPP
 
 #include <string>
+#include <cmath>
 
 #include "Util/GameObject.hpp"
 
@@ -29,8 +30,13 @@ public:
 
     // TODO: Implement the collision detection
     [[nodiscard]] bool IfCollides(const std::shared_ptr<Character>& other) const {
-        (void) other;
-        return false;
+        const auto mySize = GetScaledSize();
+        const auto otherSize = other->GetScaledSize();
+        const auto myPos = GetPosition();
+        const auto otherPos = other->GetPosition();
+
+        return (std::abs(myPos.x - otherPos.x) < (std::abs(mySize.x) + std::abs(otherSize.x)) / 2.0f) && 
+               (std::abs(myPos.y - otherPos.y) < (std::abs(mySize.y) + std::abs(otherSize.y)) / 2.0f);
     }
 
     // TODO: Add and implement more methods and properties as needed to finish Giraffe Adventure.

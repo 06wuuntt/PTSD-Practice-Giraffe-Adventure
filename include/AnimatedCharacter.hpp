@@ -26,7 +26,13 @@ public:
         temp->SetLooping(looping);
     }
 
+    void Play() {
+        auto temp = std::dynamic_pointer_cast<Util::Animation>(m_Drawable);
+        temp->Play();
+    }
+
     [[nodiscard]] bool IfAnimationEnds() const;
+    void SetPosition(const glm::vec2& pos) { m_Transform.translation = pos; }
 
 };
 
