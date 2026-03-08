@@ -13,6 +13,6 @@ git clone https://github.com/ntut-open-source-club/PTSD-Practice-Giraffe-Adventu
 - [x] Make the chest disappear when the giraffe touches it!
 - [x] Write a program to give your bee friend an animation!
 - [x] Write a program to open the door when your character touches it!
-- [ ] Design a program to countdown, stop animation after OK display
+- [x] Design a program to countdown, stop animation after OK display
 
 Hint:  Look for `TODO`s if you are lost.
